@@ -1,0 +1,42 @@
+{
+  "name": "dsh-skill-workspace-manager",
+  "version": "1.1.1",
+  "description": "DSH skill: archive a workspace per conversation using session transcripts, then delete originals only after SHA-256 verification.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "skill",
+    "workspace",
+    "archive",
+    "cleanup"
+  ],
+  "files": [
+    "SKILL.md",
+    "scripts/",
+    "references/",
+    "templates/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "inventory": "node scripts/session-inventory.mjs",
+    "archive": "node scripts/workspace-archive.mjs",
+    "purge": "node scripts/workspace-purge.mjs",
+    "auto": "node scripts/workspace-archive.mjs --auto",
+    "install-skill": "node scripts/install.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sad-Bee666/dsh-skill-workspace-manager.git"
+  },
+  "homepage": "https://github.com/Sad-Bee666/dsh-skill-workspace-manager#readme",
+  "bugs": {
+    "url": "https://github.com/Sad-Bee666/dsh-skill-workspace-manager/issues"
+  }
+}
